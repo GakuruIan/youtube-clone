@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const Button:React.FC<ButtonProps> = ({text,type,style,handleClick}) => {
   return (
-    <button type={type} className={`w-full bg-dark-200 text-white dark:bg-white px-4 py-3 dark:text-gray-950  transition-colors duration-75 ${style}`} onClick={handleClick}>
+    <button type={type} className={` bg-dark-200 text-white dark:bg-white px-4 py-3 dark:text-gray-950  transition-colors duration-75 ${style}`} onClick={handleClick}>
        {text}
     </button>
   )

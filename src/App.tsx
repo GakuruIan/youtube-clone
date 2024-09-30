@@ -8,6 +8,7 @@ import PasswordRecovery from "./Auth/PasswordRecovery";
 import Main from "./Pages/Main";
 import Videos from "./Pages/Videos/Videos";
 import Video from "./Pages/Video/Video";
+import Channel from "./Pages/Channel/Channel";
 
 const router =  createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router =  createBrowserRouter([
       {
         path:'/watch/1',
         element:<Video/>
+      },
+      {
+        path:'/channel/@username',
+        element:<Channel/>
       }
     ]
   },
