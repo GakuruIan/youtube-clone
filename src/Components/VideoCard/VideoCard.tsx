@@ -7,7 +7,7 @@ interface Props {
     // channelPhoto:string,
     channelName:string,
     views:number,
-    postedAt:number
+    postedAt:number,
 }
 
 const VideoCard:React.FC<Props> = ({thumbnail,title,channelName,views,postedAt}) => {
@@ -22,7 +22,7 @@ const VideoCard:React.FC<Props> = ({thumbnail,title,channelName,views,postedAt})
                
                 <div className="">
                    <h4 className="text-base font-medium">{title}</h4>
-                   <p className="text-sm dark:text-gray-300 my-0.5">{channelName}</p>
+                   <p className="text-sm dark:text-gray-300 ">{channelName}</p>
                    <div className="flex items-center gap-x-2">
                       <p className="text-sm dark:text-gray-400">{views} views</p>
                       <p className="text-sm dark:text-gray-400">{postedAt} day ago</p>

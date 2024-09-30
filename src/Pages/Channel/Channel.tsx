@@ -5,17 +5,20 @@ import { CiSearch } from "react-icons/ci";
 
 // components
 import SideBar from "../../Components/Sidebar/SideBar";
+import Row from "../../Components/Row/Row";
+import LinkedChannels from "../../Components/LinkedChannels/LinkedChannels";
 
 // image
 import pic from "../../assets/space.jpg";
+
 
 const Channel = () => {
   return (
     <div>
       <div className="flex  ">
         <SideBar />
-        <div className="w-full md:ml-[5.06rem]">
-          <div className="mt-4 px-4">
+        <div className="w-full  relative md:ml-[5.06rem]">
+          <div className=" mt-4 px-4">
             <div className="w-full h-36 md:h-60 mb-4">
               <img
                 src={pic}
@@ -37,7 +40,7 @@ const Channel = () => {
                     Channel Name
                   </h4>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3  gap-1 md:gap-x-2">
+                  <div className="grid  text-gray-500 grid-cols-2 md:grid-cols-3  gap-1 md:gap-x-2">
                     <span className="text-sm dark:text-gray-400">
                       @Channelname
                     </span>
@@ -59,13 +62,13 @@ const Channel = () => {
             </div>
 
             {/* channel tabs */}
-            <div className="sticky top-0">
+            <div className="sticky top-0 mb-8">
               <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
                 <ul className="flex flex-wrap -mb-px">
                   <li className="me-2">
                     <a
                       href="#"
-                      className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                      className="inline-block text-blue-600 dark:text-blue-500 dark:border-blue-500 border-blue-600 p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                     >
                      Home
                     </a>
@@ -73,7 +76,7 @@ const Channel = () => {
                   <li className="me-2">
                     <a
                       href="#"
-                      className="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
+                      className="inline-block p-4  rounded-t-lg active "
                       aria-current="page"
                     >
                      Videos
@@ -103,6 +106,16 @@ const Channel = () => {
               </div>
             </div>
             {/* channel tabs */}
+
+            {/* content */}
+               <div className="w-full relative">
+                   <Row title="Latest" url="/"/>
+                   <Row title="Popular Uploads" url="/"/>
+
+                   {/* Linked channels */}
+                   <LinkedChannels title="Linked Channels"/>
+               </div>
+            {/* content */}
           </div>
         </div>
       </div>
