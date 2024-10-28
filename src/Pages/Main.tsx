@@ -13,11 +13,11 @@ const Main = () => {
      <TopBar/>
 
      <div className="flex mt-[4.3rem] relative w-full flex-row">
-         {/* <SideBar/> */}
+         <SideBar/>
          <div className='w-full mx-1'>
            <div className="">
 
-               <div className="">
+               <div className=" md:ml-[5.06rem]">
                 <Outlet/>
                </div>
 

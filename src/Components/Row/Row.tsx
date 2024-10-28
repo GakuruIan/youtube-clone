@@ -14,10 +14,11 @@ import pic from "../../assets/space2.jpg";
 
 interface Props {
  title:string,
- url:string
+ url:string,
+ icon?:React.ReactElement
 }
 
-const Row:React.FC<Props> = ({title}) => {
+const Row:React.FC<Props> = ({title,icon}) => {
   const slider = useRef<Slider>(null);
 
   const settings = {
@@ -69,7 +70,10 @@ const Row:React.FC<Props> = ({title}) => {
               >
                 <GoChevronLeft className="h-5 w-5" />
               </button>
-              <h6 className="text-xl font-medium">{title}</h6>
+              <div className="flex items-center gap-x-1">
+                  {icon &&  React.cloneElement(icon) }
+                 <h6 className="text-sm font-poppins  font-medium">{title}</h6>
+              </div>
             </div>
 
             <button
@@ -90,10 +94,10 @@ const Row:React.FC<Props> = ({title}) => {
                       <img
                         src={pic}
                         alt=""
-                        className="h-44 w-full rounded-md object-cover"
+                        className="h-40 w-full rounded-md object-cover mb-1"
                       />
                       <div className="flex items-center justify-between my-0.5">
-                        <h6 className="text-base font-medium">Video title</h6>
+                        <h6 className="text-sm font-poppins  font-medium">Video title</h6>
                         <IoMdMore className="h-5 w-5" />
                       </div>
                       <div className="flex items-center gap-x-2">

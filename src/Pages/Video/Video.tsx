@@ -6,6 +6,8 @@ import pic from "../../assets/space2.jpg";
 // components
 import Button from "../../Components/Button/Button";
 import Comments from "../../Components/Comments/Comments";
+import TopBar from "../../Components/Topbar/TopBar";
+
 
 // icons
 import { FiThumbsUp, FiThumbsDown } from "react-icons/fi";
@@ -17,7 +19,8 @@ import Similiar from "../../Components/Similiar/Similiar";
 const Video = () => {
   return (
     <div className="pb-8">
-      <div className="w-full h-full">
+      <TopBar />
+      <div className="w-full h-full mt-[4.3rem]">
         <ReactPlayer
           url="https://www.youtube.com/watch?v=k4FF7x8vnZg"
           controls={true}
@@ -53,6 +56,7 @@ const Video = () => {
                       type="submit"
                       text="Subscribe"
                       style="w-36 rounded-full"
+                      variant="secondary"
                     />
                   </div>
 

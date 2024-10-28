@@ -27,11 +27,11 @@ const SideBar = () => {
             <IoVideocamOutline className="h-5 w-5" />
           </NavLink>
 
-          <NavLink text="Subcriptions" url="/">
+          <NavLink text="Subcriptions" url="/subscriptions">
             <MdOutlineSubscriptions className="h-5 w-5" />
           </NavLink>
 
-          <NavLink text="You" url="/">
+          <NavLink text="You" url="/profile">
             <CiUser className="h-5 w-5" />
           </NavLink>
         </div>

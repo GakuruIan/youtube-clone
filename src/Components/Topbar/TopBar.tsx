@@ -26,8 +26,8 @@ const TopBar = () => {
                       placeholder="search"
                       required
                     />
-                    <button className="flex items-center justify-center p-4 bg-dark-300 dark:bg-white">
-                        <CiSearch className="h-4 w-4 text-white dark:text-gray-900"/>
+                    <button className="flex items-center justify-center p-4 dark:bg-indigo-500 bg-indigo-600 hover:bg-indigo-700 transition-colors duration-75">
+                        <CiSearch className="h-4 w-4 text-white "/>
                     </button>
                   </form>
                 </div>
